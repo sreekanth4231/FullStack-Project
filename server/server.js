@@ -29,6 +29,10 @@ app.get("/", (req, res) => {
   res.send("Backend is running 🚀");
 });
 
+app.get("/healthz", (req, res) => {
+  res.status(200).send("OK");
+});
+
 app.listen(PORT,()=> {
     console.log(`server running on http://localhost:${PORT}`)
 })
